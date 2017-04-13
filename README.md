@@ -57,12 +57,12 @@ dependencies {
                 imageFileUpload.getOnResponse(new OnResponse() {
                     @Override
                     public void onSuccess(String message) {
-                        String message2 = message;
+                        String succesMessage = message;
                     }
 
                     @Override
                     public void onError(String message) {
-                        String message2 = message;
+                        String errorMessage = message;
                     }
                 });
 
