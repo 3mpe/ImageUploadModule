@@ -9,7 +9,7 @@
 
 ## How to install 
 
-```Groovy
+``` Groovy
 repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
@@ -21,26 +21,26 @@ dependencies {
 ```
 
 #### Example 
-````Groovy
-        // import project.
-        import com.example.a3mpe.imageupload.ImageFileUpload;
-        import com.example.a3mpe.imageupload.OnResponse;
-        import com.example.a3mpe.imageupload.ResponseImageFile;
+```` Groovy
+// import project.
+import com.example.a3mpe.imageupload.ImageFileUpload;
+import com.example.a3mpe.imageupload.OnResponse;
+import com.example.a3mpe.imageupload.ResponseImageFile;
+ 
+public class MainActivity extends AppCompatActivity {
+    ImageFileUpload imageFileUpload;
 
-    public class MainActivity extends AppCompatActivity {
-        ImageFileUpload imageFileUpload;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-
-            imageFileUpload = new ImageFileUpload(MainActivity.this);
-            imageFileUpload.galleryIntent(); // Choose a picture from the gallery or Take a photo
+        imageFileUpload = new ImageFileUpload(MainActivity.this);
+        imageFileUpload.galleryIntent(); // Choose a picture from the gallery or Take a photo
 
 
-            // To see the selected drawable item
-            imageFileUpload.getResponseImageFile(new ResponseImageFile() {
+        // To see the selected drawable item
+        imageFileUpload.getResponseImageFile(new ResponseImageFile() {
             @Override
             public void onSuccess(Bitmap bitmap) {
 
@@ -78,11 +78,10 @@ dependencies {
             }
         });
     }
-    
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         imageFileUpload.onActivityResult(requestCode,resultCode,data);
     }
 }
-
 ````
