@@ -77,5 +77,11 @@ dependencies {
             }
         });
     }
+    
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        imageFileUpload.onActivityResult(requestCode,resultCode,data);
+    }
+
 
 ````
