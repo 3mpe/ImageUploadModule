@@ -26,7 +26,7 @@ dependencies {
         import com.example.a3mpe.imageupload.ImageFileUpload;
         import com.example.a3mpe.imageupload.OnResponse;
         import com.example.a3mpe.imageupload.ResponseImageFile;
-
+public class MainActivity extends AppCompatActivity {
         ImageFileUpload imageFileUpload;
 
         @Override
@@ -82,6 +82,6 @@ dependencies {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         imageFileUpload.onActivityResult(requestCode,resultCode,data);
     }
-
+}
 
 ````
